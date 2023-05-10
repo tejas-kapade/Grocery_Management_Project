@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Products Page</title>
+    <style>
+      .container {
+  max-width: 1000px;
+  margin: 65px auto;
+  padding: 20px;
+  margin-left: 0;
+}
+#shopcart{
+    position:absolute;
+    right:5%;
+    top:5%;
+    margin-right: 0;
+    padding: 20px;
+}
+.product {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  border:1.5px solid #111;
+  border-radius:10px;
+  box-shadow:2px 2px 14px #d1d1d1;
+  transition:.2s;
+}
+.product:hover{
+box-shadow:2px 2px 16px #ffd363;
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product h2 {
+  margin-top: 10px;
+  left:0;
+  font-size:1em;
+  background:#EDFF00;
+}
+
+.product p {
+  font-weight: bold;
+  margin-top: 5px;
+   background:#A2FF6C;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
+
+.receipt {
+    position: absolute;
+    width: 66%;
+    top:15%;
+    left:15%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:last-child {
+  font-weight: bold;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+#sidepanel{
+    position:absolute;
+    width:33%;
+    height:1400px;
+    top:0;
+    right:0;
+    background-image: linear-gradient(#fae46a8c,#fff);
+}
+
+    </style>
+  </head>
+  <body>
+    <h1 id="welcomename" style="background:#fae46a8c;padding:10px;left:0;position:absolute;top:0;">Products</h1>
+    <div id="sidepanel"></div>
+    <div class="container">
+      
+      <div class="product">
+        <img src="img2/chaipatti.jpeg" alt="Product 1">
+        <h2>Red Label Tea</h2>
+        <p>Rs.499</p>
+        <button onclick="addToCart('Red Label 500gm', 499)">Add to List</button>
+      </div>
+      <div class="product">
+        <img src="img2/coffee.jpeg" alt="Product 2">
+        <h2>Coffee</h2>
+        <p>Rs.250</p>
+        <button onclick="addToCart('Coffee 500gm',250)">Add to List</button>
+      </div>
+      <div class="product">
+        <img src="img2/paasta.jpeg" alt="Product 3">
+        <h2>Paasta</h2>
+        <p>Rs.49</p>
+        <button onclick="addToCart('Paasta 1Pack', 49)">Add to List</button>
+      </div>
+      <div class="product">
+        <img src="img2/tatasalt.png" alt="Product 3">
+        <h2>TATA Salt</h2>
+        <p>Rs.20</p>
+        <button onclick="addToCart('Tata Salt', 20)">Add to List</button>
+      </div>
+      <div class="product">
+        <img src="img2/milk.jpeg" alt="Product 3">
+        <h2>Milk 1Litr</h2>
+        <p>Rs.69</p>
+        <button onclick="addToCart('Milk 1Litr', 69)">Add to List</button>
+      </div>
+      <div class="product">
+        <img src="img2/maggi.jpeg" alt="Product 3">
+        <h2>Maggie</h2>
+        <p>Rs.42</p>
+        <button onclick="addToCart('Maggie 3Packet', 42)">Add to List</button>
+      </div>
+      <div class="product">
+        <img src="img2/chyavanprash.jpeg" alt="Product 3">
+        <h2>Chyavanprash</h2>
+        <p>Rs.160</p>
+        <button onclick="addToCart('Chyavanprash ', 160)">Add to List</button>
+      </div>
+      <div class="product">
+        <img src="img2/apple.jpeg" alt="Product 3">
+        <h2>Apple 1KG</h2>
+        <p>Rs.120</p>
+        <button onclick="addToCart('Apple 1kg', 120)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/tomato.jpeg" alt="Product 3">
+        <h2>Tomatos</h2>
+        <p>Rs.40</p>
+        <button onclick="addToCart('Tomato 500g', 40)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/onion.jpeg" alt="Product 3">
+        <h2>Onion</h2>
+        <p>Rs.75</p>
+        <button onclick="addToCart('Onion 500g', 75)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/tarbuj.jpeg" alt="Product 3">
+        <h2>Watermelon</h2>
+        <p>Rs.90</p>
+        <button onclick="addToCart('Watermelon 1', 90)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/gaajar.jpeg" alt="Product 3">
+        <h2>Carrot</h2>
+        <p>Rs.60</p>
+        <button onclick="addToCart('Carrot 1kg', 60)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/red.jpeg" alt="Product 3">
+        <h2>Red tooth-paste</h2>
+        <p>Rs.80</p>
+        <button onclick="addToCart('Dabour RED 1', 80)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/oats.jpeg" alt="Product 3">
+        <h2>Oats</h2>
+        <p>Rs.99</p>
+        <button onclick="addToCart('Oats 1KG', 99)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/santra.jpeg" alt="Product 3">
+        <h2>Orange 1Kg</h2>
+        <p>Rs.180</p>
+        <button onclick="addToCart('Orange 1Kg', 180)">Add to List</button>
+      </div> <div class="product">
+        <img src="img2/cucumber.png" alt="Product 3">
+        <h2>Cuccumber</h2>
+        <p>Rs.30</p>
+        <button onclick="addToCart('Cuccumber 500g', 30)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/daalimb.png" alt="Product 3">
+        <h2>Pomegranate (Anar)</h2>
+        <p>Rs.120</p>
+        <button onclick="addToCart('Pomegranate 1Kg', 120)">Add to List</button>
+      </div>
+       <div class="product">
+        <img src="img2/soyabeen.jpeg" alt="Product 3">
+        <h2>Soyabeen Chunks</h2>
+        <p>Rs.49</p>
+        <button onclick="addToCart('Soyabeen 1Kg', 49)">Add to List</button>
+      </div>
+      
+    </div>
+    
+    <div id="shopcart">
+        <h2>Your Grocery List is here,</h2>
+      <ul id="cartList" style="border:1px solid #111;border-radius:10px;">
+      </ul>
+      <button onclick="order()" style="width: 50%;"id="orderbutton"><strong>Order</strong></button>
+    </div>
+    <div id="receipt"></div>
+    <button style='position:absolute;top:20%;right:20%;background:tomato;display: none;' id="cancelbutton" onclick="cancel()">CANCEL ORDER</button>
+
+    <script>
+let cart = [];
+const cancelbutton = document.getElementById('cancelbutton');
+var wname = document.getElementById("welcomename");
+
+wname.innerHTML = "Welcome to our shop !";
+
+function addToCart(productName, price) {
+  cart.push({
+    name: productName,
+    price: price
+  });
+
+  updateCart();
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+function updateCart() {
+  const cartList = document.getElementById("cartList");
+  cartList.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.innerText = `${item.name} - Rs.${item.price}  __`;
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Remove";
+    deleteButton.classList.add("delete-button");
+    deleteButton.addEventListener("click", () => {
+      removeItem(index);
+    });
+    li.appendChild(deleteButton);
+    cartList.appendChild(li);
+  });
+}
+
+const receiptDiv = document.getElementById("receipt");
+
+function order() {
+   cancelbutton.style.display = "block";
+
+  const totalPrice = cart.reduce((accumulator, item) => {
+    return accumulator + item.price;
+  }, 0);
+
+  const fee = totalPrice * 0.1;
+  const totalCost = totalPrice - fee;
+  var tablec = cart.length;
+
+  //receiptDiv.style.display=block;
+  receiptDiv.innerHTML = `
+    <div class="receipt">
+    <form method="post" action="payment.php">
+      <h2>Receipt</h2>
+      <table id="mytable">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+        ${cart.map((item) => {
+          return `
+            <tr>
+              <td>${item.name}</td>
+              <td>Rs.${item.price.toFixed(2)}</td>
+            </tr>
+          `;
+        }).join("")}
+        <tr>
+          <td>Subtotal:</td>
+          <td>Rs.${totalPrice.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>Discount (10% OFF):</td>
+          <td>Rs.${fee.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>Total:</td>
+          <td name="cost">Rs.${totalCost.toFixed(2)}</td>
+        </tr>
+      </table>
+      <input name="itemsc" value="${tablec}" style="display:none"/>
+      <input name="cost" value="${totalCost.toFixed(2)}" style="display:none"/>
+      <button style='background:#4CAF50;width:33%;position:relative;left:33%;font-size:1.2em;' type='submit'><strong>Proceed to Pay</strong></button>
+      </form>
+    </div>
+  `;
+  
+  cart = [];
+  updateCart();
+}
+ /*
+  const orderButton = document.getElementById("orderButton");
+  orderButton.disabled = true;
+  orderButton.innerText = "Ordering...";
+
+  const receipt = document.querySelector(".receipt");
+  const receiptHeight = receipt.offsetHeight;
+
+  receipt.style.height = "0";
+  receipt.style.overflow = "hidden";
+ 
+  setTimeout(() => {
+    receipt.style.height = receiptHeight + "px";
+  }, 100);
+
+  setTimeout(() => {
+    receipt.style.overflow = "visible";
+  }, 1000);
+}
+*/
+function cancel(){
+    receiptDiv.innerHTML="";
+    cancelbutton.style.display = "none";
+}
+    </script>
+  </body>
+</html>

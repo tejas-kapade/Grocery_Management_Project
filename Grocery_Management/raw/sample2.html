@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Grocery Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>My Grocery Store</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Welcome to My Grocery Store</h2>
+        <p>We offer fresh and high-quality groceries at affordable prices.</p>
+        <a href="#" class="btn btn-primary">Shop Now</a>
+      </div>
+    </section>
+    <section class="products">
+      <div class="container">
+        <h2>Our Products</h2>
+        <div class="product-item">
+          <img src="https://images.unsplash.com/photo-1566124600264-509b8a8ba1c0">
+          <h3>Organic Fruits and Vegetables</h3>
+          <div class="price">$2.99/lb</div>
+        </div>
+        <div class="product-item">
+          <img src="https://images.unsplash.com/photo-1617094138893-3de3d0eeb18a">
+          <h3>Fresh Seafood</h3>
+          <div class="price">$9.99/lb</div>
+        </div>
+        <div class="product-item">
+          <img src="https://images.unsplash.com/photo-1599936787922-2ee5046f1595">
+          <h3>Healthy Snacks</h3>
+          <div class="price">$1.99/each</div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>We are a family-owned grocery store that has been serving the community for over 20 years. Our mission is to provide fresh and healthy food options at affordable prices.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 My Grocery Store. All rights reserved.</p>
+    </div>
+  </footer>
+  <style>
+    /* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #f5c469;
+}
+
+/* Hero */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1506785161656-6baad7831a6a");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h2 {
+  color: #fff;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #f5c469;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #f5c469;
+  box-shadow: 0 0 10px rgba(245, 196, 105, 0.5);
+}
+
+.btn-primary {
+  border: none;
+}
+
+/* Products */
+.products {
+  padding: 80px 0;
+}
+
+.products h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product-item {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  color: #f5c469;
+  font-weight: bold;
+}
+
+/* About */
+.about {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0;
+}
+
+  </style>
+</body>
+</html>

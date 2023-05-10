@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      #calculator {
+        width: 300px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      #calculator input[type="button"] {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #eee;
+      }
+
+      #calculator input[type="text"] {
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        margin: 5px 0;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <input type="text" id="result" value="" />
+      <input type="button" value="1" onclick="addToResult('1')" />
+      <input type="button" value="2" onclick="addToResult('2')" />
+      <input type="button" value="3" onclick="addToResult('3')" />
+      <input type="button" value="+" onclick="addToResult('+')" />
+      <br />
+      <input type="button" value="4" onclick="addToResult('4')" />
+      <input type="button" value="5" onclick="addToResult('5')" />
+      <input type="button" value="6" onclick="addToResult('6')" />
+      <input type="button" value="-" onclick="addToResult('-')" />
+      <br />
+      <input type="button" value="7" onclick="addToResult('7')" />
+      <input type="button" value="8" onclick="addToResult('8')" />
+      <input type="button" value="9" onclick="addToResult('9')" />
+      <input type="button" value="*" onclick="addToResult('*')" />
+      <br />
+      <input type="button" value="0" onclick="addToResult('0')" />
+      <input type="button" value="." onclick="addToResult('.')" />
+      <input type="button" value="C" onclick="clearResult()" />
+      <input type="button" value="/" onclick="addToResult('/')" />
+      <br />
+      <input type="button" value="=" onclick="calculate()" />
+    </div>
+
+    <script>
+      function addToResult(value) {
+        document.getElementById("result").value += value;
+      }
+
+      function clearResult() {
+        document.getElementById("result").value = "";
+      }
+
+      function calculate() {
+        var result = eval(document.getElementById("result").value);
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>

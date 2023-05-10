@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>My Grocery Store</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h2>Welcome to My Grocery Store</h2>
+        <p>Your one-stop shop for fresh and organic produce.</p>
+        <a href="#" class="btn btn-primary">Shop Now</a>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-item">
+          <img src="https://www.w3schools.com/w3images/tomato.jpg" alt="Tomato">
+          <h3>Tomatoes</h3>
+          <p class="price">$2.99/lb</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+        <div class="product-item">
+          <img src="https://www.w3schools.com/w3images/potatoes.jpg" alt="Potatoes">
+          <h3>Potatoes</h3>
+          <p class="price">$1.99/lb</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+        <div class="product-item">
+          <img src="https://www.w3schools.com/w3images/corn.jpg" alt="Corn">
+          <h3>Corn</h3>
+          <p class="price">$0.99/ear</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>My Grocery Store is committed to providing the freshest and highest quality produce to our customers. We work directly with local farmers to ensure that our products are organic, sustainably grown, and free from harmful chemicals. We believe that healthy food should be accessible to everyone, which is why we offer affordable prices and a wide variety of products to choose from.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 My Grocery Store. All rights reserved.</p>
+      </div>
+    </footer>
+    <style>
+        /* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1554109119-dbb32fbfeece");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #e74c3c;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+}
+
+/* Products Section */
+.products {
+  padding: 50px 0;
+}
+
+.products h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.product-item img {
+  width: 200px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.product-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+  background-color: #f1f1f1;
+  padding: 50px 0;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+    </style>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Shopping Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+
+
+-->
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">E-Shop</a>
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        <div class="burger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to E-Shop</h1>
+      <p>Discover the latest deals and discounts on the hottest products</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <div class="container">
+      <h2>Popular Products</h2>
+      <div class="product-items">
+        <div class="product-item">
+          <img src="https://source.unsplash.com/random/400x400" alt="Product Image">
+          <h3>Product Name</h3>
+          <p class="price">$50</p>
+        </div>
+        <div class="product-item">
+          <img src="https://source.unsplash.com/random/401x401" alt="Product Image">
+          <h3>Product Name</h3>
+          <p class="price">$60</p>
+        </div>
+        <div class="product-item">
+          <img src="https://source.unsplash.com/random/402x402" alt="Product Image">
+          <h3>Product Name</h3>
+          <p class="price">$70</p>
+        </div>
+        <div class="product-item">
+          <img src="https://source.unsplash.com/random/403x403" alt="Product Image">
+          <h3>Product Name</h3>
+          <p class="price">$80</p>
+        </div>
+      </div>
+      <a href="#" class="btn">View All Products</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>E-Shop is a one-stop-shop for all your online shopping needs. We offer the latest products and deals from the biggest brands at unbeatable prices. Our goal is to provide our customers with a seamless and enjoyable shopping experience.</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 E-Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <style>
+    /* Reset Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin: 0 10px;
+}
+
+.nav-menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.burger-menu div {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  .nav-menu li a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+/* Hero Section Styles */
+.hero {
+  background-image: url('https://source.unsplash.com/random/1600x900');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #333;
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+
+  </style>
+</body>
+</html>
